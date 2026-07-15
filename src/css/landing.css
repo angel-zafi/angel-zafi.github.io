@@ -1,0 +1,421 @@
+/* -- Landing Section -- */
+
+.landing-section {
+    width: 100%;
+    min-height: 100svh;
+    padding: 60px 8% 80px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg);
+    background-image: radial-gradient(
+        var(--dots) 1.5px,
+        transparent 1.5px
+    );
+    background-size: 28px 28px;
+
+    transition:
+        background-color 250ms ease,
+        color 250ms ease;
+}
+
+
+/* -- Theme Toggle -- */
+
+.theme-toggle {
+    width: 52px;
+    height: 52px;
+
+    position: absolute;
+    top: 28px;
+    right: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border: 3px solid var(--border);
+    border-radius: 50%;
+
+    background-color: var(--surface);
+    box-shadow: 4px 4px 0 var(--shadow);
+
+    color: var(--text-h);
+
+    font-size: 1.45rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        background-color 250ms ease,
+        color 250ms ease;
+}
+
+.theme-toggle:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--shadow);
+}
+
+.theme-toggle:focus-visible {
+    outline: 4px solid var(--orange);
+    outline-offset: 4px;
+}
+
+
+/* -- Portfolio Title -- */
+
+.portfolio-title {
+    margin: 0 0 55px;
+    color: var(--text-h);
+
+    font-size: clamp(2.6rem, 6vw, 4.8rem);
+    line-height: 1.55;
+    text-align: center;
+
+    animation: title-entry 650ms ease both;
+}
+
+
+/* -- Landing Layout -- */
+
+.landing-content {
+    width: min(900px, 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+/* -- Social Links -- */
+
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.social-links a {
+    width: 46px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    transition:
+        transform 180ms ease,
+        opacity 180ms ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-4px) scale(1.08);
+}
+
+.social-links img {
+    width: 55px;
+    filter: var(--social-icon-filter);
+    transition: filter 250ms ease;
+}
+
+/* -- Profile Frame -- */
+
+.profile-frame {
+    width: 290px;
+    height: 350px;
+
+    flex-shrink: 0;
+
+    padding: 10px;
+
+    border: 12px solid var(--red);
+    border-radius: 35px;
+
+    background-color: var(--surface);
+
+    transform: rotate(-2deg);
+
+    animation: profile-entry 700ms 120ms ease both;
+
+    transition:
+        transform 220ms ease,
+        background-color 250ms ease,
+        border-color 250ms ease;
+}
+
+.profile-frame:hover {
+    transform:
+        rotate(0deg)
+        translateY(-5px);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 20px;
+    user-select: none;
+}
+
+
+/* -- Landing Menu -- */
+
+.landing-menu {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* -- Orange Menu Buttons -- */
+
+.menu-button {
+    width: 100%;
+    padding: 20px 30px;
+
+    border: 4px solid var(--border);
+    border-radius: 18px;
+
+    background-color: var(--orange);
+    box-shadow: 7px 7px 0 var(--shadow);
+
+    color: #111111;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    opacity: 0;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        background-color 180ms ease;
+}
+
+.menu-button-one {
+    animation: button-entry 500ms 300ms ease forwards;
+}
+
+.menu-button-two {
+    animation: button-entry 500ms 430ms ease forwards;
+}
+
+.menu-button-three {
+    animation: button-entry 500ms 560ms ease forwards;
+}
+
+.menu-button:hover {
+    background-color: var(--orange-hover);
+    transform: translate(4px, 4px);
+    box-shadow: 3px 3px 0 var(--shadow);
+}
+
+.menu-button:active {
+    transform: translate(6px, 6px);
+    box-shadow: 1px 1px 0 var(--shadow);
+}
+
+.menu-button:focus-visible {
+    outline: 4px solid var(--orange-hover);
+    outline-offset: 5px;
+}
+
+
+/* -- Scroll Indicator -- */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 26px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+
+    color: var(--text);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    opacity: 0.75;
+
+    animation: scroll-entry 700ms 850ms ease both;
+}
+
+.scroll-indicator span {
+    font-size: 1.2rem;
+    animation: scroll-bounce 1.5s ease-in-out infinite;
+}
+
+
+/* -- Landing Animations -- */
+
+@keyframes title-entry {
+    from {
+        opacity: 0;
+
+        transform: translateY(-18px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@keyframes profile-entry {
+    from {
+        opacity: 0;
+
+        transform:
+        rotate(-5deg)
+        translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+        rotate(-2deg)
+        translateY(0);
+    }
+}
+
+@keyframes button-entry {
+    from {
+        opacity: 0;
+
+        transform: translateX(28px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroll-entry {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.75;
+    }
+}
+
+@keyframes scroll-bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+
+/* -- Reduced Motion -- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portfolio-title,
+    .profile-frame,
+    .menu-button,
+    .scroll-indicator,
+    .scroll-indicator span {
+        animation: none;
+    }
+
+    .menu-button {
+        opacity: 1;
+    }
+
+}
+
+
+/* -- Tablet -- */
+
+@media (max-width: 900px) {
+
+    .landing-content {
+        gap: 55px;
+    }
+
+    .profile-frame {
+        width: 260px;
+        height: 320px;
+    }
+
+    .landing-menu {
+        width: 310px;
+    }
+
+}
+
+
+/* -- Mobile -- */
+
+@media (max-width: 700px) {
+
+    .landing-section {
+        min-height: auto;
+        padding: 95px 7% 90px;
+    }
+
+    .theme-toggle {
+        width: 45px;
+        height: 45px;
+
+        top: 20px;
+        right: 20px;
+
+        font-size: 1.2rem;
+    }
+
+    .portfolio-title {
+        margin-bottom: 40px;
+    }
+
+    .landing-content {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .profile-frame {
+        width: 230px;
+        height: 280px;
+    }
+
+    .landing-menu {
+        width: min(340px, 100%);
+    }
+
+    .menu-button {
+        padding: 17px 24px;
+
+        font-size: 1.15rem;
+    }
+
+}
