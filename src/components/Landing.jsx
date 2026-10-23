@@ -1,4 +1,4 @@
-import profileImage from "../assets/images/aus.jpg";
+import profileImage from "../assets/images/pfp.jpg";
 import ThemeToggle from "./ThemeToggle";
 
 import githubIcon from "../assets/icons/github.svg";
@@ -75,12 +75,15 @@ function Landing({
             </a>
 
             <a
-                href="mailto:iamzafiangel5334@gmail.com"
-                aria-label="Email"
-            >
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=youractualemail@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email me"
+                title="Email me"
+                >
                 <img
-                src={gmailIcon}
-                alt=""
+                    src={gmailIcon}
+                    alt=""
                 />
             </a>
 

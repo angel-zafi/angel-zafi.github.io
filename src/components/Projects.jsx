@@ -1,32 +1,28 @@
+import projects from "../data/projects";
 import ProjectCard from "./ProjectCard";
 
 function Projects() {
-    const projects = [
-        {
-        id: 1,
-        title: "Book Guru",
-        description:
-            "A web application for managing books with automated testing and DevOps tools.",
-        technologies: ["React", "Node.js", "Jest", "Jenkins"],
-        githubUrl: "https://github.com/angel-zafi",
-        },
-    ];
+  return (
+    <section
+      id="projects"
+      className="content-section projects-section"
+    >
+      <div className="section-container">
+        <h2 className="projects-title">
+          My Projects
+        </h2>
 
-    return (
-        <section id = "projects" className = "content-section projects-section">
-        <div className = "section-container">
-            <p className = "section-label"> Things I have created </p>
-
-            <h2> My Projects </h2>
-
-            <div className = "projects-grid">
-            {projects.map((project) => (
-                <ProjectCard key = {project.id} project = {project} />
-            ))}
-            </div>
+        <div className="projects-list">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+            />
+          ))}
         </div>
-        </section>
-    );
+      </div>
+    </section>
+  );
 }
 
 export default Projects;

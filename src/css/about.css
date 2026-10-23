@@ -1,12 +1,7 @@
 /* -- About Section -- */
 
 .about-section {
-    background-color: var(--bg);
-    background-image: radial-gradient(
-        var(--dots) 1.5px,
-        transparent 1.5px
-    );
-    background-size: 28px 28px;
+  background-color: var(--bg);
 }
 
 .about-container {
@@ -74,37 +69,58 @@
 
 /* -- Technical Knowledge -- */
 
+.tech-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.tech-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tech-category {
+  margin: 0;
+
+  color: var(--text-h);
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .tech-item {
-    padding: 9px 15px;
+  padding: 9px 15px;
 
-    border: 2px solid var(--border);
-    border-radius: 999px;
+  border: 2px solid var(--border);
+  border-radius: 999px;
 
-    background-color: var(--surface);
-    box-shadow: 3px 3px 0 var(--shadow);
+  background-color: var(--surface);
+  box-shadow: 3px 3px 0 var(--shadow);
 
-    color: var(--text-h);
+  color: var(--text-h);
 
-    font-size: 0.9rem;
-    font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 700;
 
-    transition:
-        transform 180ms ease,
-        box-shadow 180ms ease,
-        background-color 250ms ease,
-        color 250ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 250ms ease,
+    color 250ms ease;
 }
 
 .tech-item:hover {
-    transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 
-    box-shadow: 1px 1px 0 var(--shadow);
+  box-shadow: 1px 1px 0 var(--shadow);
 }
 
 

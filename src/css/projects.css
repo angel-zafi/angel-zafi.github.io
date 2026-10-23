@@ -1,0 +1,169 @@
+/* --------------------------------------------------
+   Projects Section
+-------------------------------------------------- */
+
+.projects-section {
+  background-color: var(--bg);
+}
+
+.projects-title {
+  margin-bottom: 16px;
+
+  color: var(--text-h);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.projects-intro {
+  max-width: 700px;
+  margin-bottom: 45px;
+
+  color: var(--text);
+  line-height: 1.7;
+}
+
+
+/* --------------------------------------------------
+   Projects Grid
+-------------------------------------------------- */
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+
+/* --------------------------------------------------
+   Project Card
+-------------------------------------------------- */
+
+.project-card {
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  border: 2px solid var(--divider);
+  border-radius: 16px;
+
+  background-color: var(--surface);
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 250ms ease;
+}
+
+.project-card-clickable {
+  cursor: pointer;
+}
+
+.project-card-clickable:hover {
+  transform: translateY(-5px);
+  border-color: var(--orange);
+}
+
+.project-card-clickable:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
+}
+
+
+/* --------------------------------------------------
+   Project Header
+-------------------------------------------------- */
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-header h3 {
+  margin: 0;
+
+  color: var(--text-h);
+  font-size: 1.5rem;
+}
+
+.project-arrow {
+  color: var(--orange);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+
+/* --------------------------------------------------
+   Project Description
+-------------------------------------------------- */
+
+.project-description {
+  margin: 0;
+
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+
+/* --------------------------------------------------
+   Topics Covered
+-------------------------------------------------- */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-top: auto;
+}
+
+.project-tags span {
+  padding: 7px 12px;
+
+  border: 1px solid var(--divider);
+  border-radius: 999px;
+
+  background-color: var(--surface-2);
+
+  color: var(--text-h);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+/* --------------------------------------------------
+   Documentation Link
+-------------------------------------------------- */
+
+.project-documentation {
+  width: fit-content;
+
+  color: var(--text-h);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.project-documentation:hover {
+  color: var(--orange);
+}
+
+
+/* --------------------------------------------------
+   Mobile
+-------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .projects-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 22px;
+  }
+}

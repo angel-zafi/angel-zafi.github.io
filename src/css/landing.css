@@ -1,28 +1,23 @@
 /* -- Landing Section -- */
 
 .landing-section {
-    width: 100%;
-    min-height: 100svh;
-    padding: 60px 8% 80px;
+  width: 100%;
+  min-height: 100svh;
+  padding: 60px 8% 80px;
 
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    background-color: var(--bg);
-    background-image: radial-gradient(
-        var(--dots) 1.5px,
-        transparent 1.5px
-    );
-    background-size: 28px 28px;
+  background-color: var(--bg);
 
-    transition:
-        background-color 250ms ease,
-        color 250ms ease;
+  transition:
+    background-color 250ms ease,
+    color 250ms ease;
 }
 
 

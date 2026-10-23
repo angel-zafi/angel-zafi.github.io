@@ -1,19 +1,71 @@
 function About() {
+  
   const technologies = [
-    "JavaScript",
-    "Python",
-    "HTML",
-    "CSS",
-    "React",
-    "MongoDB",
-    "SQL",
-    "Flutter",
-    "Dart",
-    "Power BI",
-    "KNIME",
-    "Streamlit",
-    "AWS",
+    {
+      category: "Frontend Development",
+      skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Vite",
+      ],
+    },
+    {
+      category: "Backend & Databases",
+      skills: [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "SQL",
+      ],
+    },
+    {
+      category: "Mobile Development",
+      skills: [
+        "Flutter",
+        "Dart",
+        "Firebase",
+      ],
+    },
+    {
+      category: "Cloud & IoT",
+      skills: [
+        "AWS",
+        "M5Stack Core2",
+        "MQTT",
+      ],
+    },
+    {
+      category: "Data Analytics & Automation",
+      skills: [
+        "Python",
+        "Power BI",
+        "KNIME",
+        "Streamlit",
+        "Excel VBA",
+        "Power Automate",
+      ],
+    },
+    {
+      category: "AI & Creative Tools",
+      skills: [
+        "Synthesia AI",
+      ],
+    },
+    {
+      category: "DevOps & Testing",
+      skills: [
+        "Git",
+        "GitHub",
+        "Jenkins",
+        "Docker",
+        "Jest",
+        "Playwright",
+      ],
+    },
   ];
+
 
   return (
     <section
@@ -23,7 +75,7 @@ function About() {
       <div className="section-container about-container">
         {/* -----------------------------------------
             About Heading
-        ----------------------------------------- */}
+        -----------------------------------------  */}
 
         <p className="section-label">
           Get to know me
@@ -35,7 +87,7 @@ function About() {
 
         {/* -----------------------------------------
             Introduction
-        ----------------------------------------- */}
+        -----------------------------------------  */}
 
         <div className="about-item">
           <h3 className="about-item-title">
@@ -65,7 +117,7 @@ function About() {
 
         {/* -----------------------------------------
             Experience
-        ----------------------------------------- */}
+        -----------------------------------------  */}
 
         <div className="about-item">
           <h3 className="about-item-title">
@@ -93,7 +145,7 @@ function About() {
 
         {/* -----------------------------------------
             Education
-        ----------------------------------------- */}
+        -----------------------------------------  */}
 
         <div className="about-item">
           <h3 className="about-item-title">
@@ -113,21 +165,34 @@ function About() {
 
         {/* -----------------------------------------
             Technical Knowledge
-        ----------------------------------------- */}
+        -----------------------------------------  */}
 
         <div className="about-item about-item-last">
           <h3 className="about-item-title">
             Technical Knowledge
           </h3>
 
-          <div className="tech-list">
-            {technologies.map((technology) => (
-              <span
-                className="tech-item"
-                key={technology}
+          <div className="tech-groups">
+            {technologies.map((group) => (
+              <div
+                className="tech-group"
+                key={group.category}
               >
-                {technology}
-              </span>
+                <h4 className="tech-category">
+                  {group.category}
+                </h4>
+
+                <div className="tech-list">
+                  {group.skills.map((technology) => (
+                    <span
+                      className="tech-item"
+                      key={technology}
+                    >
+                      {technology}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
