@@ -29,9 +29,7 @@ function ProjectCard({ project }) {
       role={hasGithub ? "link" : undefined}
       tabIndex={hasGithub ? 0 : undefined}
     >
-      {/* -----------------------------------------
-          Project Header
-      ----------------------------------------- */}
+      {/* -- Project Header -- */}
 
       <div className="project-header">
         <h3>{project.title}</h3>
@@ -43,17 +41,13 @@ function ProjectCard({ project }) {
         )}
       </div>
 
-      {/* -----------------------------------------
-          Description
-      ----------------------------------------- */}
+      {/* -- Description -- */}
 
       <p className="project-description">
         {project.description}
       </p>
 
-      {/* -----------------------------------------
-          Topics Covered
-      ----------------------------------------- */}
+      {/* -- Topics Covered -- */}
 
       <div className="project-tags">
         {project.topics.map((topic) => (
@@ -63,9 +57,7 @@ function ProjectCard({ project }) {
         ))}
       </div>
 
-      {/* -----------------------------------------
-          Documentation
-      ----------------------------------------- */}
+      {/* -- Documentation -- */}
 
       {project.documentation && (
         <a

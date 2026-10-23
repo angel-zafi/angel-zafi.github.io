@@ -73,9 +73,7 @@ function About() {
       className="content-section about-section"
     >
       <div className="section-container about-container">
-        {/* -----------------------------------------
-            About Heading
-        -----------------------------------------  */}
+        {/* -- About Heading --  */}
 
         <p className="section-label">
           Get to know me
@@ -85,9 +83,7 @@ function About() {
           About Me
         </h2>
 
-        {/* -----------------------------------------
-            Introduction
-        -----------------------------------------  */}
+        {/* -- Introduction --  */}
 
         <div className="about-item">
           <h3 className="about-item-title">
@@ -98,30 +94,28 @@ function About() {
             <p>
               Hello! I’m Angel, an Information Technology
               student who enjoys building practical and
-              user-friendly digital solutions.
+              user-friendly digital solutions
             </p>
 
             <p>
               I have experience developing web, mobile,
               cloud and data-driven applications through
-              my school projects.
+              my school projects
             </p>
 
             <p>
               I enjoy learning new technologies and turning
               ideas into applications that solve real-world
-              problems.
+              problems!
             </p>
           </div>
         </div>
 
-        {/* -----------------------------------------
-            Experience
-        -----------------------------------------  */}
+        {/* -- Experience --  */}
 
         <div className="about-item">
           <h3 className="about-item-title">
-            Experience
+            Project Experience
           </h3>
 
           <div className="about-item-content">
@@ -131,21 +125,19 @@ function About() {
               an AWS-hosted restaurant seating website,
               a Lost &amp; Found website using an Agile
               SCRUM workflow, and an online library built
-              with React and MongoDB.
+              with React and MongoDB
             </p>
 
             <p>
               I have also worked on an IoT plant moisture
               detector using the M5Stack Core2 and AWS
               Sandbox, as well as a Streamlit application
-              for analysing chocolate sales trends.
+              for analysing chocolate sales trends
             </p>
           </div>
         </div>
 
-        {/* -----------------------------------------
-            Education
-        -----------------------------------------  */}
+        {/* -- Education --  */}
 
         <div className="about-item">
           <h3 className="about-item-title">
@@ -163,9 +155,31 @@ function About() {
           </div>
         </div>
 
-        {/* -----------------------------------------
-            Technical Knowledge
-        -----------------------------------------  */}
+
+        {/* -- Internship Experience -- */}
+
+        <div className="about-item">
+          <h3 className="about-item-title">
+            Internship Experience
+          </h3>
+
+          <div className="about-item-content">
+            <p className="about-emphasis">
+              School Internship Programme (SIP)
+            </p>
+
+            <p>
+              NCS Pte Ltd | Present
+            </p>
+
+            <p>
+              Right now, I am currently undergoing my internship at NCS Pte Ltd, where I am gaining valuable experience in the IT industry and applying my skills to real-world projects!
+            </p>
+          </div>
+        </div>
+
+
+        {/* -- Technical Knowledge --  */}
 
         <div className="about-item about-item-last">
           <h3 className="about-item-title">
